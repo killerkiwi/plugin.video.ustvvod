@@ -558,9 +558,9 @@ def add_show(series_title, mode = '', sitemode = '', url = '', favor = 0, hide =
 	u += '&thumb="' + urllib.quote_plus(thumb) + '"'
 	if tvdb_id is not None:
 		u += '&tvdb_id="' + urllib.quote_plus(tvdb_id) + '"'
-	if PLUGINFANART is not fanart:
+	if PLUGINFANART is not fanart and fanart:
 		u += '&fanart="' + urllib.quote_plus(fanart) + '"'
-	if tvdbposter is not None:
+	if tvdbposter is not None and tvdbposter:
 		u += '&poster="' + urllib.quote_plus(tvdbposter) + '"'
 	u += '&name="' + urllib.quote_plus(series_title) + '"'
 	contextmenu = []
